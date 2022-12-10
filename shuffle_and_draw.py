@@ -16,7 +16,7 @@ cv2.setWindowProperty("foo", cv2.WND_PROP_FULLSCREEN, cv2.WINDOW_FULLSCREEN)
 
 for image in images:
     cv2.imshow("foo", image)
-    key = cv2.waitKey()
+    # key = cv2.waitKey()
 
     if key == 27 or key == 113:
         break
