@@ -3,7 +3,7 @@ import glob
 import random
 from IPython import embed
 
-data_path = "./images/"
+data_path = "./new_images/"
 images = []
 for img in glob.glob(data_path + "*.png"):
     n = cv2.imread(img)
@@ -16,7 +16,8 @@ cv2.setWindowProperty("foo", cv2.WND_PROP_FULLSCREEN, cv2.WINDOW_FULLSCREEN)
 
 for image in images:
     cv2.imshow("foo", image)
-    # key = cv2.waitKey()
+    key = cv2.waitKey()
+    print(image.shape)
 
     if key == 27 or key == 113:
         break
